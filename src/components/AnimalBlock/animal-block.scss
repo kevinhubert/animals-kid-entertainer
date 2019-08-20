@@ -1,0 +1,37 @@
+.animal-block {
+  position: relative;
+  display: grid;
+  height: 250px;
+  width: 100%;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 30px;
+  transition-duration: 150ms;
+  text-transform: uppercase;
+  font-weight: 700;
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    transition-duration: 150ms;
+  }
+  &__name {
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.animal-block:hover {
+  transform: scale(1.1);
+  &:before {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
